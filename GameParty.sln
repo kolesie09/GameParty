@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameParty", "GameParty\GameParty.csproj", "{EAF3513B-C432-4508-A4AB-27FEC3BBF8F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jaka_To_Melodia", "Jaka_To_Melodia", "{63BA96A3-3300-4E86-BBEA-FEE47EEAE4B7}"
+	ProjectSection(SolutionItems) = preProject
+		GameParty\Jaka_To_Melodia.xaml = GameParty\Jaka_To_Melodia.xaml
+		GameParty\Jaka_To_Melodia.xaml.cs = GameParty\Jaka_To_Melodia.xaml.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAF3513B-C432-4508-A4AB-27FEC3BBF8F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF3513B-C432-4508-A4AB-27FEC3BBF8F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF3513B-C432-4508-A4AB-27FEC3BBF8F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF3513B-C432-4508-A4AB-27FEC3BBF8F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4108510D-2FFF-4955-B3D5-D880EB68EDB7}
+	EndGlobalSection
+EndGlobal
