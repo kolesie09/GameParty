@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace GameParty
     /// </summary>
     public partial class Jaka_To_Melodia : Page
     {
+        Programs_JakaToMelodia Programs = new Programs_JakaToMelodia();
         public Jaka_To_Melodia()
         {
             InitializeComponent();
@@ -82,6 +84,7 @@ namespace GameParty
 
             if (NameButton == "EASY")
             {
+                Programs.PlayMusic("D:\\Programowanie\\GameParty\\GameParty\\Music\\qwe123.wav");
                 info.Text = "Wybrano " + ChooseMusicType + " poziom " + NameButton;
             }
             if (NameButton == "MEDIUM")

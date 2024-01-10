@@ -5,12 +5,6 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameParty", "GameParty\GameParty.csproj", "{EAF3513B-C432-4508-A4AB-27FEC3BBF8F4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jaka_To_Melodia", "Jaka_To_Melodia", "{63BA96A3-3300-4E86-BBEA-FEE47EEAE4B7}"
-	ProjectSection(SolutionItems) = preProject
-		GameParty\Jaka_To_Melodia.xaml = GameParty\Jaka_To_Melodia.xaml
-		GameParty\Jaka_To_Melodia.xaml.cs = GameParty\Jaka_To_Melodia.xaml.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
