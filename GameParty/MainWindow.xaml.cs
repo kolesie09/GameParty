@@ -20,16 +20,68 @@ namespace GameParty
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Deklaracja pola do przechowywania aktualnie otwartej strony
+        private Jaka_To_Melodia currentJaka_To_MelodiaPage;
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Jaka_To_Melodia();
+            if (currentJaka_To_MelodiaPage == null || !IsPageOpen(currentJaka_To_MelodiaPage))
+            {
+                // Jeśli nie, utwórz nową instancję strony Jaka_To_Melodia
+                currentJaka_To_MelodiaPage = new Jaka_To_Melodia();
+
+                // Ustaw zawartość w głównej kontrolce (np. Frame)
+                Main.Content = currentJaka_To_MelodiaPage;
+            }
+
+
+
         }
 
-       
+        // Metoda sprawdzająca, czy dana strona jest otwarta
+        private bool IsPageOpen(Page page)
+        {
+            // Przeszukaj wszystkie kontrolki Frame w oknie głównym
+            foreach (var frame in FindVisualChildren<Frame>(Application.Current.MainWindow))
+            {
+                // Sprawdź, czy strona jest zawarta w danym kontrolerze Frame
+                if (frame.Content == page)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Metoda pomocnicza do znajdowania kontrolki Frame w oknie głównym
+        private IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+
+        private void Main_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

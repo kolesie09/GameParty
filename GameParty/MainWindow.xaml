@@ -16,6 +16,6 @@
 
 
 
-        <Frame x:Name="Main" Margin="0,60,0,0" Grid.ColumnSpan="3"/>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden" Margin="0,60,0,0" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
